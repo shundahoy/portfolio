@@ -1,0 +1,33 @@
+.main{
+    background-color: #191b1c;
+    color:#9ca1ad;
+    padding: 10% 20px 0;
+    h1{
+        font-size: 9vw;
+        line-height: 1.4;
+        letter-spacing: 0.05em;
+        text-shadow: rgba(60, 194, 235, 0.6) 1px 0 10px;
+        span{
+            display: block;
+        }
+        @media screen and (max-width:500px) { 
+            line-height: 2.5;
+            text-align: center;
+            font-size: 8vw;
+        }
+    }
+    .contactbtn{
+        padding: 0 8em;
+        line-height: 4;
+        border: 1px solid #9ca1ad;
+        display: table;
+        margin: 48px auto 0;
+        box-shadow: 0 10px 25px 0 rgba(60, 194, 235, 0.5);
+        @media screen and (max-width:500px) { 
+            padding: 0 2em;
+        line-height: 3;
+        margin: 20px auto 0;
+        }
+       
+    }
+}

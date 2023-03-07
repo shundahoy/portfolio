@@ -1,0 +1,174 @@
+.header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 30px;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    h1{
+        font-size: 30px;
+        font-weight: 700;
+        color:#9ca1ad;
+        @media screen and (max-width:500px) { 
+          font-size: 24px;
+          }
+    }
+    nav{
+        ul{
+            display: flex;
+            font-size: 20px;
+            font-weight: 500;
+            @media screen and (max-width:780px) { 
+              display: none;
+            }
+            font-style: normal;
+            li{
+                margin-right: 40px;
+                a{
+                  color:#9ca1ad;
+                }
+            }
+        }
+    }
+    & > div{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.humburger {
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height:50px;
+
+    span{
+        display: inline-block;
+        transition: all .4s;/*アニメーションの設定*/
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background:#9ca1ad;
+        width: 45%; 
+    }
+
+  }
+  .humburger span:nth-of-type(1) {
+    top:15px; 
+  }
+  
+  .humburger span:nth-of-type(2) {
+    top:23px;
+  }
+
+  .humburger span:nth-of-type(3) {
+    top:31px;
+  }
+
+  .humburger span.open:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.humburger span.open:nth-of-type(2) {
+  opacity: 0;/*真ん中の線は透過*/
+}
+
+.humburger span.open:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+  .drawerMenu {
+    color:#9ca1ad;
+    background-color: #191b1c;
+    position: fixed;
+    transition: 0.5s;
+   
+    opacity: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+
+    transition:0.5s;
+    li{
+      text-align: left;
+      margin-bottom: 40px;
+      overflow: hidden;
+      text-shadow: rgba(60, 194, 235, 1) 1px 0 10px;
+      
+      a{
+        display: table;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: left;
+
+        opacity: 0;
+        transform: translateY(100px);
+        transition: 1s;
+        br{
+          display: none;
+          @media screen and (max-width:500px) { 
+           display: block;
+          }
+        }
+        span{
+          margin-left: 60px;
+          font-size: 16px;
+          @media screen and (max-width:500px) { 
+            margin: 0;
+            font-size: 14px;
+           }
+        }
+      }
+    }
+    &.open {
+      opacity: 1;
+      z-index: 100;
+      visibility: visible;
+      a{
+        transition: 1s;
+        opacity: 1;
+        transform: translateY(0px);
+        position: relative;
+        
+      }
+    }
+    ul{
+      padding: 100px;
+      width: 100%;
+      @media screen and (max-width:780px) { 
+        padding: 40px;
+      }
+    }
+
+  }
+  
+
+  .colc.open{
+    li{
+      a{
+        color: #0B2E63;
+        display: none;
+        
+      }
+    }
+  }
